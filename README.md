@@ -1,6 +1,6 @@
-# music
+# templates
 
-A new Flutter project.
+A new flutter adwaita templates for linux.
 
 ## Getting Started
 
