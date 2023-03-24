@@ -18,7 +18,9 @@ const adwSidebarChildrens = [
     label: 'Test',
   )
 ];
-
+const developers = {
+  'Riceneeder': 'riceneeder',
+};
 const adwViewStackChildrens = [Welcome(), Test()];
 
 class MyHomePage extends StatelessWidget {
@@ -28,9 +30,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final developers = {
-      'Riceneeder': 'riceneeder',
-    };
     return Obx(() => AdwScaffold(
           flapController: homepagecontroller.flapController.value,
           actions: AdwActions().bitsdojo,
@@ -44,11 +43,8 @@ class MyHomePage extends StatelessWidget {
               onPressed: homepagecontroller.toggleFlapController,
             )
           ],
-          end: [
+          end: const [
             HomePagePpopupMenu(developers: developers),
-            AdwWindowButton(
-                buttonType: WindowButtonType.minimize,
-                onPressed: appWindow?.minimize),
           ],
           flap: (isDrawer) => AdwSidebar(
             currentIndex: homepagecontroller.currentIndex.value,
